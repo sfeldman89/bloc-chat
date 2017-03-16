@@ -1,12 +1,16 @@
 (function() {
-    function ButtonCtrl($uibBUtton) {
+    function ButtonCtrl($uibButton) {
         this.newChatRoom = function() {
             
             var buttonInstance = $uibButton.open({
                 templateUrl: '/templates/button.html',
-                controller: function($scope, $uibButtonlInstance) {
+                controller: function($scope, $uibButtonInstance) {
                     $scope.cancel = function() {
                         Button.dismiss('Cancel');
+                    };
+                    
+                    $scope.create = function() {
+                        Button.close();
                     };
                 },
                 size: 'sm'
