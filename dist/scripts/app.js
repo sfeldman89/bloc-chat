@@ -8,10 +8,15 @@
 		});
         
         $stateProvider
-            .state('rooms', {
+            .state('room', {
                 url: '/',
-                controller: 'RoomsCtrl as rooms',
+                controller: 'RoomCtrl as room',
                 templateUrl: '/templates/home.html'
+        })
+            .state('button', {
+                url: '/room',
+                controller: 'ButtonCtrl as button',
+                templateUrl: '/templates/button.html'
         });
 	}
     
