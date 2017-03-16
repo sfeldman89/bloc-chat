@@ -1,5 +1,5 @@
 (function() {
-    function RoomsCtrl(Room, $uibButton) {
+    function RoomCtrl(Room, $uibButton) {
         this.chatRooms = Room.getRooms().all;
         var vm = this;
         vm.roomService = Room;
@@ -29,6 +29,6 @@
     
     angular
         .module('blocChat')
-        .controller('RoomsCtrl', ['Room', '$uibButton', RoomsCtrl]);
+        .controller('RoomCtrl', ['Room', '$uibButton', RoomCtrl]);
     
 })();
