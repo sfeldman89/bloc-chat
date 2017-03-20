@@ -1,32 +1,35 @@
-
+<!DOCTYPE html>
 <html ng-app="blocChat">
 <head lang="en">
     <meta charset="UTF-8">
     <title>Bloc Chat</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
-    <ui-view></ui-view>
-    
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
-    <script>
-        var config = {
-            apiKey: "AIzaSyDIblsDC1EgYeiJ2hPwMiZgVve_FPUehFM",
-            authDomain: "bloc-chat-b8d56.firebaseapp.com",
-            databaseURL: "https://bloc-chat-b8d56.firebaseio.com",
-            storageBucket: "bloc-chat-b8d56.appspot.com",
-            messagingSenderId: "864238151489"
-        };
-        firebase.initializeApp(config);
-    </script>
-    
+	
+	<ui-view></ui-view>
+   <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDIblsDC1EgYeiJ2hPwMiZgVve_FPUehFM",
+    authDomain: "bloc-chat-b8d56.firebaseapp.com",
+    databaseURL: "https://bloc-chat-b8d56.firebaseio.com",
+    storageBucket: "bloc-chat-b8d56.appspot.com",
+    messagingSenderId: "864238151489"
+  };
+  firebase.initializeApp(config);
+</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.min.js"></script>
+	<script src="/scripts/ui-bootstrap-2.5.0.min.js"></script>
     <script src="/scripts/app.js"></script>
-    <script src="/scripts/services/room.js"></script>
-    <script src="/scripts/services/button.js"></script>
-    <script src="/scripts/controllers/RoomCtrl.js"></script>
-    <script src="/scripts/controllers/ButtonCtrl.js"></script>
+	<script src="/scripts/services/Room.js"></script>
+	<script src="/scripts/services/Modal.js"></script>
+	<script src="/scripts/controllers/HomeCtrl.js"></script>
+	<script src="/scripts/controllers/ModalCtrl.js"></script>
 </body>
 </html>
