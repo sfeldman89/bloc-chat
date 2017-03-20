@@ -8,15 +8,15 @@
 		});
         
         $stateProvider
-            .state('rooms', {
+            .state('home', {
                 url: '/',
-                controller: 'RoomsCtrl as rooms',
+                controller: 'HomeCtrl as home',
                 templateUrl: '/templates/home.html'
-        });
+        })
 	}
     
     
     angular
-        .module('blocChat', ['firebase', 'ui.router'])
+        .module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap' ])
         .config(config);
 })();
